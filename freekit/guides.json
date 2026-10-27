@@ -86,5 +86,16 @@
   "lead": "화려한 편집 없이 인기 쇼츠 610만 회가 나온 얼굴 없는 채널을 보고, 클로드에게 같은 형식의 주제를 시켜 봤습니다. 제가 보낸 질문 그대로와, 나온 주제 중 무엇을 고르고 무엇을 확인해야 하는지 정리했습니다. 수치는 2026-10-27 화면 기준입니다.",
   "keywords": "쇼츠 주제 추천 유튜브 주제 찾기 근황 쇼츠 이유 쇼츠 클로드 주제 얼굴 없는 유튜브 꿀주제",
   "content": "\n<div class=\"guide-kicker\">꿀주제 · 인스타 댓글 전용 자료</div>\n<h4>1. 본 채널 숫자 (2026-10-27)</h4>\n<ul><li>인기 쇼츠 조회수 610만 · 604만 · 569만 회 (유튜브 채널 인기순 화면)</li><li>지난 7일 조회 약 348만 · 평균 길이 약 41초 (vidIQ 확장 추정치)</li><li>최근 쇼츠 6개 제목이 모두 '○○ 근황' 형식</li></ul>\n<h4>2. 클로드에 보낸 질문 그대로</h4>\n<div class=\"template\">요즘 한국 사람들이 궁금해할 '○○ 근황'·'~하는 이유' 형식 유튜브 쇼츠 주제 10개 뽑아줘. 각각 제목 한 줄이랑 첫 문장 한 줄까지. 표로.</div>\n<p>제 컴퓨터에서 잰 시간은 <strong>18.1초</strong>였습니다(검색 없이 답한 경우).</p>\n<h4>3. 이렇게 나왔어요 (일부)</h4>\n<ol><li>은퇴한 야구 레전드들 근황 — 그 시절 TV만 틀면 나오던 선수들, 지금은 어디서 뭘 하고 있을까요?</li><li>회식이 사라진 회사가 늘어난 이유 — 예전엔 빠지면 눈치 보던 회식이 요즘은 슬슬 없어지고 있습니다.</li><li>20대가 퇴사하고 다시 시골로 가는 이유 — 서울에서 버티던 청년들이 짐을 싸서 내려가는 데는 이유가 있습니다.</li></ol>\n<h4>4. 고르는 순서</h4>\n<ol><li><strong>궁금증이 제목에 있나</strong> — '근황', '이유'처럼 누르면 답이 나오는 형식인지</li><li><strong>내 채널 주제와 맞나</strong> — 10개 중 내 채널 방향과 겹치는 것만 남기기</li><li><strong>사실 확인</strong> — 클로드도 답 끝에 \"가격·인물은 확인 후 넣으라\"고 적었습니다. 숫자·인물은 뉴스·공식 자료로 직접 확인</li><li><strong>첫 문장 그대로 대본 첫 줄로</strong> — 첫 문장이 곧 첫 3초입니다</li></ol>\n<h4>5. 더 뽑고 싶을 때 이어서 보낼 말</h4>\n<div class=\"template\">위 10개 중 3번이랑 비슷한 결로 10개 더. 이번엔 제목을 15자 안으로.</div>\n"
+ },
+ {
+  "id": "caveman-token-save",
+  "title": "클로드 토큰 아끼는 caveman 설치·끄기·켜 둘 기능 정리",
+  "category": "AI 활용",
+  "type": "따라하기",
+  "purpose": "성장",
+  "status": "공개",
+  "lead": "깃허브 별 11만 개를 받은 토큰 절약 도구 caveman 을 설치하고, 영상 작업에 켜 둘 기능과 끄는 법, 저장소가 직접 밝힌 한계까지 정리했습니다. 숫자는 2026-10-27 저장소 README 기준입니다.",
+  "keywords": "caveman 클로드 코드 토큰 절약 토큰 아끼기 원시인 말투 AI 비용 줄이기 깃허브 스킬",
+  "content": "\n<div class=\"guide-kicker\">CAVEMAN · 인스타 댓글 전용 자료</div>\n<h4>1. 숫자로 보는 caveman</h4>\n<ul><li>별 115,305개 · 포크 6,651 · Apache-2.0 (2026-10-27)</li><li>같은 답: 보통 63토큰 → caveman 20토큰 (저장소 예시, tiktoken 기준)</li><li>읽기 줄이기: 클로드 코드 54번 실행에서 입력 토큰 33.2% 감소, 답 18개 중 18개 정답 (저장소 측정)</li></ul>\n<h4>2. 설치</h4>\n<div class=\"template\">npx @caveman-ai/cli@latest</div>\n<p>짧은 답 기능만 원하면:</p>\n<div class=\"template\">npx skills add JuliusBrussee/caveman -g</div>\n<p>대화 중 <strong>/caveman</strong> 으로 켜고, <strong>stop caveman</strong> 이라고 말하면 원래대로 돌아옵니다. 지금 켜진 기능은 <strong>caveman status</strong>.</p>\n<h4>3. 여섯 가지 기능 (저장소 표)</h4>\n<ol>\n  <li><strong>Say less</strong> — 답을 짧게, 코드는 그대로 (63 → 20토큰)</li>\n  <li><strong>Read less</strong> — 로그·JSON·CSV·테스트 출력을 줄여서 읽힘 (입력 33.2%↓)</li>\n  <li><strong>Auto</strong> — 질문마다 모델·생각 수준 고르기 (저장소 중간 측정 54% 저렴 · 무료 계정 필요)</li>\n  <li><strong>Blocks</strong> — 한 번 쓴 스크립트를 다시 씀 (397 → 76토큰)</li>\n  <li><strong>Waste fixes</strong> — 토큰 새는 곳 찾기 (아직 측정 안 됨)</li>\n  <li><strong>Browse</strong> — 웹 페이지를 압축해서 읽힘 (129.8배 작게)</li>\n</ol>\n<h4>4. 영상 작업에 쓸 때</h4>\n<p>클로드 코드로 ffmpeg·받아쓰기를 돌리면 긴 로그가 계속 쌓입니다. 이런 출력이 Read less 대상입니다. 영상·자막 파일 내용 자체는 바꾸지 않습니다(코드·명령·경로는 글자 그대로 둔다고 밝힘).</p>\n<h4>5. 저장소가 직접 밝힌 한계</h4>\n<ul><li>규칙 자체가 입력 약 1,160토큰을 씁니다.</li><li>요청 횟수로 요금을 내는 경우(GitHub Copilot)엔 답이 짧아도 아끼는 게 없습니다.</li><li>그냥 \"짧게 답해(Answer concisely)\"라고 한 것보다 /caveman 은 중앙값 기준 3% 더 줄입니다. 더 줄이려면 /ultracave(35%).</li></ul>\n"
  }
 ]
